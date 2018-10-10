@@ -21,7 +21,7 @@ Prose in this repository is provided with a CC-BY-4.0 license, which is commonly
   - [Practices](#practices)
   - [Resources](#resources)
 - [Scientific background](#scientific-background)
-- [Experimental methods](#experimental-methods)
+- [Supplementary data](#supplementary-data)
 - [Data analysis](#data-analysis)
   - [Jupyter Notebook](#jupyter-notebook)
 - [Results](#results)
@@ -117,9 +117,30 @@ I incorporated practices for reproducible scientific experimentation and data an
 
 [(Back to top)](#top)
 
-## Experimental methods
+## Supplementary data
 
-The experimental methods are summarized in the computational analyses. Supplementary data files, including the electronic lab notebook, protocols, datasheets and information on materials used, raw data, other data analyses, slides, and images, are available in the [data-supplementary sub-directory](data-supplementary) of this repository.
+Supplementary data files, including the electronic lab notebook, protocols, datasheets and information on materials used, raw data, other data analyses, slides, and images, are available in the *[data-supplementary](data-supplementary)* sub-directory of this repository.
+
+[Git-LFS](https://git-lfs.github.com/) was used to manage supplementary files.
+
+```sh
+$ brew install git-lfs
+$ git lfs install
+$ cd path/to/repo
+$ touch .gitattributes
+$ git lfs track "*.docx" "*.pdf" "*.pptx" "*.xlsx" "*.zip"
+Tracking "*.docx"
+Tracking "*.pdf"
+Tracking "*.pptx"
+Tracking "*.xlsx"
+Tracking "*.zip"
+$ git add .gitattributes
+$ git commit -m "Initialize Git LFS"
+$ git add --all
+$ git commit
+$ git push origin master
+$ git lfs push origin master
+```
 
 ## Data analysis
 
