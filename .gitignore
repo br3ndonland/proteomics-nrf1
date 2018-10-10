@@ -1,3 +1,7 @@
+# My gitignores
+.DS_Store
+*.code-workspace
+
 # Python gitignore from https://github.com/github/gitignore/blob/master/Python.gitignore
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -103,9 +107,3 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-
-# My gitignores
-.DS_Store
-Gels-and-blots/
-Mass-spec-TCMP/
-Materials/

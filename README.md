@@ -6,6 +6,12 @@ Brendon Smith
 
 [br3ndonland](https://github.com/br3ndonland)
 
+<a href="https://colab.research.google.com/github/br3ndonland/proteomics-nrf1/blob/master/proteomics-nrf1.ipynb">
+  <img width="50px" src="https://colab.research.google.com/img/colab_favicon.ico">
+</a> Launch in Google Colaboratory
+
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/proteomics-nrf1/master?urlpath=lab) Launch in Binder container
+
 [![code license](https://img.shields.io/badge/code%20license-MIT-blue.svg?longCache=true&style=for-the-badge)](https://choosealicense.com/)
 
 Code in this repository is MIT-licensed.
@@ -18,12 +24,12 @@ Prose in this repository is provided with a CC-BY-4.0 license, which is commonly
 
 - [Reproducibility](#reproducibility)
   - [Comments](#comments)
-  - [Practices](#practices)
   - [Resources](#resources)
+  - [Practices](#practices)
 - [Scientific background](#scientific-background)
 - [Supplementary data](#supplementary-data)
 - [Data analysis](#data-analysis)
-  - [Jupyter Notebook](#jupyter-notebook)
+  - [Jupyter](#jupyter)
 - [Results](#results)
 
 ## Reproducibility
@@ -40,15 +46,6 @@ This repository is a practical example of reproducible scientific data analysis.
 
 It might seem strange to my scientific colleagues, who are mostly focused on career advancement and personal aggrandizement, that I would take so much time to analyze preliminary data from a pilot study like this. **It's not just about the end result. If we want to address the reproducibility crisis, we need to focus on the process.**
 
-### Practices
-
-To promote reproducible scientific work:
-
-- Comprehensively **document** experiments and analyses.
-- Format code files as **computational narratives** mixing prose and code with a tool like Jupyter Notebook.
-- **Version control code** with Git and share code on a website like GitHub.
-- Create a **reproducible cloud computing environment** using a tool like Binder.
-
 ### Resources
 
 - NPR correspondent Richard Harris sums up the reproducibility crisis in his book Rigor Mortis.
@@ -57,25 +54,25 @@ To promote reproducible scientific work:
   - [Recorded livestream discussion at NYU](https://livestream.com/accounts/17645697/events/7229448/videos/153465413)
 - The surgeon and writer Atul Gawande wrote a book about his research, in which he found that distributing a checklist (protocol) to surgical team members reduced patient deaths by half. If world-class surgeons can benefit from improved protocols, scientists certainly can also.
   - [The Checklist Manifesto, by Atul Gawande](http://a.co/0SjWYmN)
-  - Haynes, AB et al. A surgical safety checklist to reduce morbidity and mortality in a global population. *NEJM* 360:491–499 (2009). DOI: [10.1056/NEJMsa0810119](https://doi.org/10.1056/NEJMsa0810119)
+  - Haynes, AB et al. [A surgical safety checklist to reduce morbidity and mortality in a global population](https://doi.org/10.1056/NEJMsa0810119). *NEJM* 2009.
 - The scientific journal *eLife* is a leader in reproducible data analysis and publishing. I particularly enjoy the [eLife Labs blog](https://elifesciences.org/labs). The Editor-in-Chief, Nobel laureate Randy Schekman, has written about the [reproducibility crisis](https://elifesciences.org/articles/31697) and the [damaging effects of luxury journals](http://www.theguardian.com/commentisfree/2013/dec/09/how-journals-nature-science-cell-damage-science). Naomi Penfold, Innovation Officer at eLife, has made me aware of many of the [tools below](#tools).
 - These papers provide general discussions of reproducibility:
-  - Barba LA. The hard road to reproducibility. *Science* 354:142 (2016). DOI: [10.1126/science.354.6308.142](https://doi.org/10.1126/science.354.6308.142)
-  - Loscalzo J. Irreproducible experimental results: Causes, (mis)interpretations, and consequences. *Circulation* 125:1211–1214 (2012). DOI: [10.1161/circulationaha.112.098244](https://doi.org/10.1161/circulationaha.112.098244)
-  - Morrison SJ. Time to do something about reproducibility. *eLife* 3:1–4 (2014). DOI: [10.7554/eLife.03981](https://doi.org/10.7554/eLife.03981)
-  - Sarewitz D. The pressure to publish pushes down quality. *Nature* 533:147 (2016). DOI: [10.1038/533147a](https://doi.org/10.1038/533147a)
+  - Barba LA. [The hard road to reproducibility](https://doi.org/10.1126/science.354.6308.142). *Science* 2016.
+  - Loscalzo J. [Irreproducible experimental results: Causes, (mis)interpretations, and consequences](https://doi.org/10.1161/circulationaha.112.098244). *Circulation* 2012.
+  - Morrison SJ. [Time to do something about reproducibility](https://doi.org/10.7554/eLife.03981). *eLife* 2014.
+  - Sarewitz D. [The pressure to publish pushes down quality](https://doi.org/10.1038/533147a). *Nature* 2016.
 - This *Cell Reports* commentary is a valuable example of the importance of documentation for experimental reproducibility.
-  - Hines WC, Su Y, Kuhn I, Polyak K, Bissell MJ. Sorting out the FACS: A devil in the details. *Cell Rep.* 6:779–781 (2014). DOI: [10.1016/j.celrep.2014.02.021](https://doi.org/10.1016/j.celrep.2014.02.021)
+  - Hines WC, Su Y, Kuhn I, Polyak K, Bissell MJ. [Sorting out the FACS: A devil in the details](https://doi.org/10.1016/j.celrep.2014.02.021). *Cell Rep.* 2014.
 - Research reagents and materials, including antibodies, cell lines, and mice, appear to contribute substantially to lack of reproducibility.
-  - Baker M. Reproducibility crisis: Blame it on the antibodies. *Nature* 521:274–276 (2015). DOI: [10.1038/521274a](https://doi.org/10.1038/521274a)
-  - Couzin-Frankel J. When mice mislead. *Science* 342:922–925 (2013). DOI: [10.1126/science.342.6161.922](https://doi.org/10.1126/science.342.6161.922)
-  - Ioannidis JPA. Extrapolating from animals to humans. *Sci. Transl. Med.* 4:151ps15 (2012). DOI:  [10.1126/scitranslmed.3004631](https://doi.org/10.1126/scitranslmed.3004631)
-  - Lorsch JR, Collins FS, Lippincott-Schwartz J. Fixing problems with cell lines: Technologies and policies can improve authentication. *Science* 346:1452–1453 (2014). DOI: [10.1126/science.1259110](https://doi.org/10.1126/science.1259110)
-  - Martin B, Ji S, Maudsley S, Mattson MP. 'Control' laboratory rodents are metabolically morbid: Why it matters. *PNAS* 107:6127–6133 (2010). DOI: [10.1073/pnas.0912955107](https://doi.org/10.1073/pnas.0912955107)
+  - Baker M. [Reproducibility crisis: Blame it on the antibodies](https://doi.org/10.1038/521274a). *Nature* 2015.
+  - Couzin-Frankel J. [When mice mislead](https://doi.org/10.1126/science.342.6161.922). *Science* 2013.
+  - Ioannidis JPA. [Extrapolating from animals to humans](https://doi.org/10.1126/scitranslmed.3004631). *Sci. Transl. Med.* 2012.
+  - Lorsch JR, Collins FS, Lippincott-Schwartz J. [Fixing problems with cell lines: Technologies and policies can improve authentication](https://doi.org/10.1126/science.1259110). *Science* 2014.
+  - Martin B, Ji S, Maudsley S, Mattson MP. ['Control' laboratory rodents are metabolically morbid: Why it matters](https://doi.org/10.1073/pnas.0912955107). *PNAS* 2010.
 - *Nature* ironically reports on the reproducibility crisis, while continuing to publishing trendy irreproducible articles weekly.
-  - Baker M. 1,500 scientists lift the lid on reproducibility. *Nature* 533:452–454 (2016). DOI: [10.1038/533452a](https://doi.org/10.1038/533452a)
-  - Shen H. Interactive notebooks: Sharing the code. *Nature* 515:151–2 (2014). DOI: [10.1038/515151a](https://doi.org/10.1038/515151a)
-- The citation style used above is my own custom style that I used in my [dissertation](http://hdl.handle.net/2142/72961). It combines aspects of the Nature and BioMed Central (BMC) styles. The style is informative, concise, and light on punctuation and formatting.
+  - Baker M. [1,500 scientists lift the lid on reproducibility](https://doi.org/10.1038/533452a). *Nature* 2016.
+  - Shen H. [Interactive notebooks: Sharing the code](https://doi.org/10.1038/515151a). *Nature* 2014.
+- The citation style used above is my own custom style, originally developed for my [dissertation](http://hdl.handle.net/2142/72961). It combines aspects of the Nature and BioMed Central (BMC) styles. The style is concise yet informative, and light on punctuation and formatting. I recently added DOI links over the article titles, and removed journal volume and page numbers.
 
 #### Tools
 
@@ -83,25 +80,33 @@ To promote reproducible scientific work:
 - [Gigantum](http://gigantum.io/): Research project management and collaboration system. It version-controls your research materials, allows them to be easily shared and published, and bundles everything to run reproducibly in the cloud.
 - [Greene Integrative Genomics Laboratory at Penn](http://www.greenelab.com/): Bioinformatics lab that prioritizes transparent and computationally reproducible research. They developed a pipeline for continuous analysis of research data (see [Nature Biotechnology paper](https://www.nature.com/articles/nbt.3780), [GitHub](https://greenelab.github.io/continuous_analysis/) and [eLife Labs blog post](https://elifesciences.org/labs/e623676c/reproducibility-automated)), and published an [open, collaborative review article](https://greenelab.github.io/deep-review/) and an [analysis of Sci-Hub](https://elifesciences.org/articles/32822). Check out their [GitHub](https://github.com/greenelab/).
 - [Hypothesis](https://web.hypothes.is/): Open annotations on the web.
-- Jupyter Notebook:
-  - See below
-  - Somers J. "[The scientific paper is obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/)." *The Atlantic*, 20180405
+- [Project Jupyter](https://jupyter.org)
+  - [Google Cloud Platform Podcast Episode 122](https://www.gcppodcast.com/post/episode-122-project-jupyter-with-jessica-forde-yuvi-panda-and-chris-holdgraf/) on Project Jupyter with Jessica Forde, Yuvi Panda and Chris Holdgraf
+  - Somers J. [The scientific paper is obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/). *The Atlantic* 20180405.
+  - See below for details on Jupyter Notebook.
 - [Open Science Framework](https://cos.io/our-products/open-science-framework/): Research project management and collaboration system. Integrates many other software tools and forms of data.
 - [Protocols.io](https://www.protocols.io/): Open access repository for creation and sharing of scientific protocols.
-- [ScienceFair](http://sciencefair-app.com/): Decentralized p2p science literature client. See the [eLife Labs blog post](https://elifesciences.org/labs/88b45406/sciencefair-a-new-desktop-science-library) about ScienceFair.
+- [ScienceFair](http://sciencefair-app.com/): Decentralized p2p science literature client. See the [eLife Labs blog post](https://elifesciences.org/labs/88b45406/sciencefair-a-new-desktop-science-library) about ScienceFair. So far, it can only access eLife articles, and even that doesn't really work.
 - [sciNote](https://scinote.net/): Free electronic lab notebook.
 - [Stencila](https://stenci.la/): Open document suite that can be used to write and run code in a computationally reproducible way. I recently attended an eLife webinar about Stencila. eLife is [considering](https://elifesciences.org/for-the-press/e6038800/elife-supports-development-of-open-technology-stack-for-publishing-reproducible-manuscripts-online) Stencila as part of a "Reproducible Document Stack" to generate their manuscripts.
 - [We-Sci](http://www.we-sci.com/): Tool to ensure proper attribution for scientific work.
 - [Whole Tale](http://wholetale.org/): Research project management system.
 - [Zenodo](https://zenodo.org/): Repository for digital materials to be permanently archived and stored with DOI versioning.
 
-[(Back to top)](#top)
-
 #### Workshops
 
 - [Data Carpentry](http://www.datacarpentry.org/), which is sponsored by [NumFOCUS](https://www.numfocus.org/), has a [Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum) and holds workshops on reproducible data analysis in Python and R.
 - The Harvard [Institute for Applied Computational Science (IACS)](https://iacs.seas.harvard.edu/) provides free resources to the scientific computing community, such as the annual [Computefest](https://computefest.seas.harvard.edu/). See *EDA.ipynb* and *grammarofdata.ipynb* from [Computefest 2018](https://github.com/Harvard-IACS/computefest2018-pandas) for info on reproducible Exploratory Data Analysis (EDA) workflows.
 - Vincent Carey (Harvard Medical School, Brigham & Women's Hospital) provided helpful [resources](https://github.com/vjcitn/Repro2017) for reproducible data analyses associated with his Repro2017 Harvard Catalyst talk.
+
+### Practices
+
+To promote reproducible scientific work:
+
+- Comprehensively **document** experiments and analyses.
+- Format code files as **computational narratives** mixing prose and code with a tool like Jupyter Notebook.
+- **Version control code** with Git and share code on a website like GitHub.
+- Create a **reproducible cloud computing environment** using a tool like Binder.
 
 [(Back to top)](#top)
 
@@ -144,17 +149,47 @@ $ git lfs push origin master
 
 ## Data analysis
 
-### Jupyter Notebook
+### Jupyter
 
-- Data analysis was performed with the [Python](https://www.python.org/) 3 computing language in a [Jupyter Notebook](http://jupyter.org) computational narrative.
+- Data analysis was performed with the [Python](https://www.python.org/) 3 computing language in a [Jupyter Notebook](https://jupyter.org).
 - Jupyter Notebook **combines prose and code** to promote construction of **reproducible computational narratives** that configure the computing environment and precisely describe each step in the data analysis. When code from a reproducible computational narrative is run on another computer, there is a high probability that the same result will be obtained. Reproducibility.
-- [JupyterLab](http://jupyterlab.readthedocs.io/en/latest/) can be used to run Jupyter Notebook files.
-- [Binder](https://mybinder.org/) can run Jupyter Notebooks in the cloud.
+
+#### Local Jupyter Notebooks
+
+[JupyterLab](http://jupyterlab.readthedocs.io/en/stable/) can be used to run Jupyter Notebook files.
+
+- I have Python 3 and Jupyter installed via [Homebrew](https://brew.sh). The Jupyter available via Homebrew includes Jupyter Notebook but not JupyterLab.
+
+  ```sh
+  # after installing homebrew
+  brew install python
+  brew install jupyter
+  ```
+
+- I [install JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) with the [Pipenv](https://docs.pipenv.org/) virtual environment tool.
+
+  ```sh
+  brew install pipenv
+  cd path/where/you/want/jupyterlab
+  pipenv install jupyterlab
+  pipenv shell
+    jupyter lab
+  ```
+
+#### Cloud Jupyter Notebooks
+
+- [Binder](https://mybinder.org/) can run Jupyter Notebooks in the cloud by creating [Docker](https://www.docker.com/) containers. It takes a long time to build containers. It works well with Python, but I found that it was not properly loading additional packages when running R.
 - Google provides a cloud-based Jupyter Notebook environment called [Colaboratory](https://colab.research.google.com). At the time of this writing, it only supports Python.
+
+<a href="https://colab.research.google.com/github/br3ndonland/proteomics-nrf1/blob/master/proteomics-nrf1.ipynb">
+  <img width="50px" src="https://colab.research.google.com/img/colab_favicon.ico">
+</a> Launch in Google Colaboratory
+
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/proteomics-nrf1/master?urlpath=lab) Launch in Binder container
 
 ## Results
 
-![Volcano plot from R analysis comparing proteins in cholesterol-fed vs chow-fed liver](img/r-proteomics-nrf1-volcano.png)
+![Volcano plot from R analysis comparing proteins in cholesterol-fed vs chow-fed liver](img/proteomics-nrf1-volcano.png)
 
 Complement C1q proteins A, B, C (green dots in the plot above) were identified as potentially interacting with Nrf1 in the setting of liver cholesterol accumulation. The experiment did have notable limitations, which prompted us to refine our methods and continue with further experiments.
 
