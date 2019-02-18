@@ -78,25 +78,30 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 #### Tools
 
 - [Binder](https://mybinder.org/) turns GitHub repositories into reproducible computing environments. It uses code and dependency files to create [Docker](https://www.docker.com/) images that run in web browsers. **Binder is a potentially great feature, but my experience so far is that it's extremely slow, and not properly loading additional R packages.**
-- [Gigantum](http://gigantum.io/): Research project management and collaboration system. It version-controls your research materials, allows them to be easily shared and published, and bundles everything to run reproducibly in the cloud.
-- [Greene Integrative Genomics Laboratory at Penn](http://www.greenelab.com/): Bioinformatics lab that prioritizes transparent and computationally reproducible research. They developed a pipeline for continuous analysis of research data (see [Nature Biotechnology paper](https://www.nature.com/articles/nbt.3780), [GitHub](https://greenelab.github.io/continuous_analysis/) and [eLife Labs blog post](https://elifesciences.org/labs/e623676c/reproducibility-automated)), and published an [open, collaborative review article](https://greenelab.github.io/deep-review/) and an [analysis of Sci-Hub](https://elifesciences.org/articles/32822). Check out their [GitHub](https://github.com/greenelab/).
+- [Gigantum](https://gigantum.io/): Research project management and collaboration system. It version-controls your research materials, allows them to be easily shared and published, and bundles everything to run reproducibly in the cloud.
+- [Greene Integrative Genomics Laboratory at Penn](https://www.greenelab.com/):
+  - Bioinformatics lab that prioritizes transparent and computationally reproducible research.
+  - They developed a pipeline for continuous analysis of research data (see [Nature Biotechnology paper](https://www.nature.com/articles/nbt.3780), [GitHub](https://greenelab.github.io/continuous_analysis/) and [eLife Labs blog post](https://elifesciences.org/labs/e623676c/reproducibility-automated)). Continuous Integration (CI) is combined with a persistent archive like Figshare or Zenodo, and data analysis is re-run every time a change is made.
+  - They wrote an [open, collaborative deep learning review article](https://greenelab.github.io/deep-review/).
+  - They published an [analysis of Sci-Hub](https://elifesciences.org/articles/32822).
+  - Check out their [GitHub](https://github.com/greenelab/).
 - [Hypothesis](https://web.hypothes.is/): Open annotations on the web.
 - [Project Jupyter](https://jupyter.org)
   - [Google Cloud Platform Podcast Episode 122](https://www.gcppodcast.com/post/episode-122-project-jupyter-with-jessica-forde-yuvi-panda-and-chris-holdgraf/) on Project Jupyter with Jessica Forde, Yuvi Panda and Chris Holdgraf
-  - Somers J. [The scientific paper is obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/). *The Atlantic* 20180405.
+  - Somers J. [The scientific paper is obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/). *The Atlantic* 2018.
   - See below for details on Jupyter Notebook.
 - [Open Science Framework](https://cos.io/our-products/open-science-framework/): Research project management and collaboration system. Integrates many other software tools and forms of data.
 - [Protocols.io](https://www.protocols.io/): Open access repository for creation and sharing of scientific protocols.
 - [ScienceFair](http://sciencefair-app.com/): Decentralized p2p science literature client. See the [eLife Labs blog post](https://elifesciences.org/labs/88b45406/sciencefair-a-new-desktop-science-library) about ScienceFair. So far, it can only access eLife articles, and even that doesn't really work.
 - [sciNote](https://scinote.net/): Free electronic lab notebook.
 - [Stencila](https://stenci.la/): Open document suite that can be used to write and run code in a computationally reproducible way. I recently attended an eLife webinar about Stencila. eLife is [considering](https://elifesciences.org/for-the-press/e6038800/elife-supports-development-of-open-technology-stack-for-publishing-reproducible-manuscripts-online) Stencila as part of a "Reproducible Document Stack" to generate their manuscripts.
-- [We-Sci](http://www.we-sci.com/): Tool to ensure proper attribution for scientific work.
-- [Whole Tale](http://wholetale.org/): Research project management system.
-- [Zenodo](https://zenodo.org/): Repository for digital materials to be permanently archived and stored with DOI versioning.
+- [We-Sci](https://www.we-sci.com/): Tool to ensure proper attribution for scientific work.
+- [Whole Tale](https://wholetale.org/): Research project management system.
+- [Zenodo](https://zenodo.org/): Repository for digital materials to be permanently archived and stored with DOI versioning. [Figshare](https://figshare.com/) is similar.
 
 #### Workshops
 
-- [Data Carpentry](http://www.datacarpentry.org/), which is sponsored by [NumFOCUS](https://www.numfocus.org/), has a [Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum) and holds workshops on reproducible data analysis in Python and R.
+- [Data Carpentry](https://www.datacarpentry.org/), which is sponsored by [NumFOCUS](https://www.numfocus.org/), has a [Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum) and holds workshops on reproducible data analysis in Python and R.
 - The Harvard [Institute for Applied Computational Science (IACS)](https://iacs.seas.harvard.edu/) provides free resources to the scientific computing community, such as the annual [Computefest](https://computefest.seas.harvard.edu/). See *EDA.ipynb* and *grammarofdata.ipynb* from [Computefest 2018](https://github.com/Harvard-IACS/computefest2018-pandas) for info on reproducible Exploratory Data Analysis (EDA) workflows.
 - Vincent Carey (Harvard Medical School, Brigham & Women's Hospital) provided helpful [resources](https://github.com/vjcitn/Repro2017) for reproducible data analyses associated with his Repro2017 Harvard Catalyst talk.
 
