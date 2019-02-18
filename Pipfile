@@ -8,6 +8,7 @@ pandas = "*"
 jupyterlab = "*"
 
 [dev-packages]
+black = "*"
 
 [requires]
 python_version = "3.7"
