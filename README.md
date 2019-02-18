@@ -164,23 +164,26 @@ $ git lfs push origin master
 
 [JupyterLab](http://jupyterlab.readthedocs.io/en/stable/) can be used to run Jupyter Notebook files.
 
-- I have Python 3 and Jupyter installed via [Homebrew](https://brew.sh). The Jupyter available via Homebrew includes Jupyter Notebook but not JupyterLab.
+If running the notebook file locally, I would suggest using JupyterLab within a Pipenv virtual environment. Here are some setup instructions:
+
+- I install Python and the [Pipenv](https://pipenv.readthedocs.io/en/latest/) virtual environment tool on macOS via [Homebrew](https://brew.sh). I [install JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) with Pipenv. Once installation is complete, navigate to your project's directory, install dependencies, and run JupyterLab.
+- Here are the necessary command line arguments:
 
   ```sh
-  # after installing homebrew
-  brew install python
-  brew install jupyter
-  ```
-
-- I [install JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) with the [Pipenv](https://docs.pipenv.org/) virtual environment tool.
-
-  ```sh
+  brew install python3
   brew install pipenv
+  brew install jupyter
   cd path/where/you/want/jupyterlab
-  pipenv install jupyterlab
+  # On first install: pipenv install bokeh jupyterlab pandas statsmodels xlrd
+  # After Pipfile is generated
+  pipenv install
   pipenv shell
-    jupyter lab
+  # Install any JupyterLab extensions at this point
+  (pipenv) $ jupyter labextension install @jupyterlab/toc
+  (pipenv) $ jupyter lab
   ```
+
+- I previously used [Anaconda](https://www.anaconda.com/) to manage my Python and R distributions, and now use Homebrew. I switched because Anaconda is a very large installation, not as flexible or general as Homebrew, and not as important for virtual environments now that we have Pipenv.
 
 #### Cloud Jupyter Notebooks
 
