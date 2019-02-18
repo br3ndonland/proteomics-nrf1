@@ -30,6 +30,8 @@ Prose in this repository is provided with a CC-BY-4.0 license, which is commonly
 - [Supplementary data](#supplementary-data)
 - [Data analysis](#data-analysis)
   - [Jupyter](#jupyter)
+  - [Pipenv for local Jupyter notebooks](#pipenv-for-local-jupyter-notebooks)
+  - [Cloud Jupyter Notebooks](#cloud-jupyter-notebooks)
 - [Results](#results)
 
 ## Reproducibility
@@ -160,7 +162,7 @@ $ git lfs push origin master
 - Data analysis was performed with the [Python](https://www.python.org/) 3 computing language in a [Jupyter Notebook](https://jupyter.org).
 - Jupyter Notebook **combines prose and code** to promote construction of **reproducible computational narratives** that configure the computing environment and precisely describe each step in the data analysis. When code from a reproducible computational narrative is run on another computer, there is a high probability that the same result will be obtained. Reproducibility.
 
-#### Local Jupyter Notebooks
+### Pipenv for local Jupyter notebooks
 
 [JupyterLab](http://jupyterlab.readthedocs.io/en/stable/) can be used to run Jupyter Notebook files.
 
@@ -174,7 +176,7 @@ If running the notebook file locally, I would suggest using JupyterLab within a 
   brew install pipenv
   brew install jupyter
   cd path/where/you/want/jupyterlab
-  # On first install: pipenv install bokeh jupyterlab pandas statsmodels xlrd
+  # On first install: pipenv install black bokeh jupyterlab pandas statsmodels xlrd
   # After Pipfile is generated
   pipenv install
   pipenv shell
@@ -184,8 +186,20 @@ If running the notebook file locally, I would suggest using JupyterLab within a 
   ```
 
 - I previously used [Anaconda](https://www.anaconda.com/) to manage my Python and R distributions, and now use Homebrew. I switched because Anaconda is a very large installation, not as flexible or general as Homebrew, and not as important for virtual environments now that we have Pipenv.
+- I use the [Black](https://black.readthedocs.io/en/stable/) autoformatter for Python code. Black is still considered a pre-release. There are two key steps to using Black within a Pipenv:
+    1. Installing Black with a `--dev` flag
 
-#### Cloud Jupyter Notebooks
+        ```sh
+        pipenv install black --dev
+        ```
+
+    2. Allowing pre-releases into the lock file
+
+        ```sh
+        pipenv lock --pre
+        ```
+
+### Cloud Jupyter Notebooks
 
 - [Binder](https://mybinder.org/) can run Jupyter Notebooks in the cloud by creating [Docker](https://www.docker.com/) containers. It takes a long time to build containers. It works well with Python, but I found that it was not properly loading additional packages when running R.
 - Google provides a cloud-based Jupyter Notebook environment called [Colaboratory](https://colab.research.google.com). At the time of this writing, it only supports Python.
