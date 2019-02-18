@@ -49,15 +49,16 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 ### Resources
 
 - NPR correspondent Richard Harris sums up the reproducibility crisis in his book Rigor Mortis.
-  - [Rigor Mortis: How Sloppy Science Creates Worthless Cures, Crushes Hope, and Wastes Billions, by Richard Harris](http://a.co/5uQDILy)
+  - [Rigor mortis: how sloppy science creates worthless cures, crushes hope, and wastes billions, by Richard Harris](https://www.amazon.com/dp/B074WGYMP8)
   - [Retraction Watch interview with Rigor Mortis author Richard Harris](https://retractionwatch.com/2017/04/04/failure-essential-part-science-qa-author-new-book-reproducibility/)
   - [Recorded livestream discussion at NYU](https://livestream.com/accounts/17645697/events/7229448/videos/153465413)
 - The surgeon and writer Atul Gawande wrote a book about his research, in which he found that distributing a checklist (protocol) to surgical team members reduced patient deaths by half. If world-class surgeons can benefit from improved protocols, scientists certainly can also.
-  - [The Checklist Manifesto, by Atul Gawande](http://a.co/0SjWYmN)
-  - Haynes, AB et al. [A surgical safety checklist to reduce morbidity and mortality in a global population](https://doi.org/10.1056/NEJMsa0810119). *NEJM* 2009.
-- The scientific journal *eLife* is a leader in reproducible data analysis and publishing. I particularly enjoy the [eLife Labs blog](https://elifesciences.org/labs). The Editor-in-Chief, Nobel laureate Randy Schekman, has written about the [reproducibility crisis](https://elifesciences.org/articles/31697) and the [damaging effects of luxury journals](http://www.theguardian.com/commentisfree/2013/dec/09/how-journals-nature-science-cell-damage-science). Naomi Penfold, Innovation Officer at eLife, has made me aware of many of the [tools below](#tools).
-- These papers provide general discussions of reproducibility:
+  - [The Checklist Manifesto, by Atul Gawande](https://www.amazon.com/dp/B0031Q9ZWY)
+  - Haynes AB *et al*. [A surgical safety checklist to reduce morbidity and mortality in a global population](https://doi.org/10.1056/NEJMsa0810119). *NEJM* 2009.
+- The scientific journal *eLife* is a leader in reproducible data analysis and publishing. I particularly enjoy the [eLife Labs blog](https://elifesciences.org/labs). The Editor-in-Chief, Nobel laureate Randy Schekman, has written about the [reproducibility crisis](https://elifesciences.org/articles/31697) and the [damaging effects of luxury journals](https://www.theguardian.com/commentisfree/2013/dec/09/how-journals-nature-science-cell-damage-science). Naomi Penfold, Innovation Officer at eLife, has made me aware of many of the [tools below](#tools).
+- These articles provide general discussions of reproducibility:
   - Barba LA. [The hard road to reproducibility](https://doi.org/10.1126/science.354.6308.142). *Science* 2016.
+  - Etchells P. [What are the roadblocks to successful scientific replications?](https://www.theguardian.com/science/head-quarters/2015/oct/16/roadblocks-to-successful-scientific-replications-materials-sharing-copyright) *The Guardian* 2015.
   - Loscalzo J. [Irreproducible experimental results: Causes, (mis)interpretations, and consequences](https://doi.org/10.1161/circulationaha.112.098244). *Circulation* 2012.
   - Morrison SJ. [Time to do something about reproducibility](https://doi.org/10.7554/eLife.03981). *eLife* 2014.
   - Sarewitz D. [The pressure to publish pushes down quality](https://doi.org/10.1038/533147a). *Nature* 2016.
@@ -72,7 +73,7 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 - *Nature* ironically reports on the reproducibility crisis, while continuing to publishing trendy irreproducible articles weekly.
   - Baker M. [1,500 scientists lift the lid on reproducibility](https://doi.org/10.1038/533452a). *Nature* 2016.
   - Shen H. [Interactive notebooks: Sharing the code](https://doi.org/10.1038/515151a). *Nature* 2014.
-- The citation style used above is my own custom style, originally developed for my [dissertation](http://hdl.handle.net/2142/72961). It combines aspects of the Nature and BioMed Central (BMC) styles. The style is concise yet informative, and light on punctuation and formatting. I recently added DOI links over the article titles, and removed journal volume and page numbers.
+- The citation style used above is my own custom style, adapted from the style I developed for my [dissertation](http://hdl.handle.net/2142/72961). It combines aspects of the Nature and BioMed Central (BMC) styles. The style is concise yet informative, light on punctuation and formatting, and designed for electronic viewing. DOI HTTPS hyperlinks are provided. Journal volume and page numbers are no longer relevant and have been removed. In addition to the style specifications, I use sentence case for article titles and title case for journal titles. A CSL version for use with Zotero and other citation managers is available in [this public GitHub Gist](https://gist.github.com/br3ndonland/166dd2f566c50ba050924061df066731).
 
 #### Tools
 
