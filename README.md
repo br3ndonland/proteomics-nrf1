@@ -1,6 +1,6 @@
 # README
 
-Nrf1 proteomics repository
+Molecular biology experiments, mass spectrometry-based proteomics, and reproducible data analysis
 
 Brendon Smith
 
